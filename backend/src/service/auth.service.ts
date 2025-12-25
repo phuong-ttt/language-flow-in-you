@@ -28,5 +28,6 @@ export class AuthService {
     if (user && await this.bcrypt.comparePasswords(password, user.password)) {
       return { userId: user.id, username: username, name: user.name };
     }
+    return null;
   }
 }

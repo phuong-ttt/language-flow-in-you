@@ -40,4 +40,6 @@ coverage/
 
 # Production
 *.production
+
 backend/docs/plans/
+backend/apis
