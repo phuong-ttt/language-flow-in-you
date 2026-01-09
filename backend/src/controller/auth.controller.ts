@@ -15,9 +15,6 @@ export class AuthController {
     const { accessToken } = await this.authService.login(req.user);
 
     res.cookie('access-token', accessToken, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
       expires: new Date(Date.now() + 3600000 * 24), // 1 day
     });
 
